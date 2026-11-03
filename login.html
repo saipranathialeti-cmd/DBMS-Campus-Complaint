@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form-card">
+    <h1>Login</h1>
+    <p>Choose your account type and enter your details.</p>
+
+    <form method="POST" action="/login">
+        <label>Login As</label>
+        <select name="role" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="faculty">Faculty</option>
+        </select>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required>
+
+        <button type="submit" class="btn">Login</button>
+    </form>
+
+    <p>New student? <a href="/register">Register here</a></p>
+    <p><a href="/">Back to Home</a></p>
+</div>
+{% endblock %}

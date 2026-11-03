@@ -1,0 +1,218 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #222;
+}
+
+header {
+    background: #173b70;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 30px auto;
+    min-height: 75vh;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 15px;
+}
+
+.hero h1 {
+    color: #173b70;
+    font-size: 34px;
+}
+
+.hero p {
+    color: #555;
+    font-size: 17px;
+}
+
+.home-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.card, .form-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.form-card {
+    max-width: 450px;
+    margin: 45px auto;
+}
+
+.form-card h1 {
+    text-align: center;
+    color: #173b70;
+}
+
+label {
+    display: block;
+    margin: 13px 0 6px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn, button {
+    display: inline-block;
+    background: #173b70;
+    color: white;
+    padding: 11px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.btn:hover, button:hover {
+    background: #245493;
+}
+
+.secondary {
+    background: #4d647f;
+}
+
+.message {
+    background: #e5efff;
+    color: #173b70;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 9px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.stat-card h2 {
+    color: #173b70;
+    font-size: 30px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 750px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+}
+
+th {
+    background: #173b70;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+td input, td select, td textarea {
+    min-width: 110px;
+    margin: 0;
+}
+
+.history {
+    margin-top: 20px;
+    padding: 15px;
+    background: #eef3fa;
+    border-radius: 7px;
+}
+
+.history-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background: #173b70;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+}

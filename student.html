@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Student Dashboard</h1>
+<p>Welcome, {{ session.get('name') }}!</p>
+
+<section class="card">
+    <h2>Submit a Complaint</h2>
+
+    <form id="complaintForm">
+      <label>Complaint Category</label>
+<select id="category" required>
+    <option value="">Select Category</option>
+    <option value="Infrastructure">Infrastructure</option>
+    <option value="Electrical">Electrical</option>
+    <option value="Internet">Internet</option>
+    <option value="Cleanliness">Cleanliness</option>
+    <option value="Water">Water</option>
+    <option value="Other">Other</option>
+</select>
+
+        <label>Priority</label>
+        <select id="priority">
+            <option>Low</option>
+            <option selected>Medium</option>
+            <option>High</option>
+            <option>Urgent</option>
+        </select>
+
+        <label>Complaint Description</label>
+        <textarea id="description" rows="4"
+                  placeholder="Describe your complaint..." required></textarea>
+
+        <button class="btn" type="submit">Submit Complaint</button>
+    </form>
+
+    <p id="studentMessage"></p>
+</section>
+
+<section class="card">
+    <h2>My Complaints</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Assigned Staff</th>
+                    <th>Resolution</th>
+                    <th>Date</th>
+                    <th>History</th>
+                </tr>
+            </thead>
+            <tbody id="studentComplaints">
+                <tr><td colspan="8">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="studentHistory" class="history"></div>
+</section>
+{% endblock %}

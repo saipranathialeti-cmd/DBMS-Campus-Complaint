@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Faculty Dashboard</h1>
+<p>Welcome, {{ session.get('name') }}!</p>
+
+<div class="stats">
+    <div class="stat-card">
+        <h3>Total Complaints</h3>
+        <h2 id="totalCount">0</h2>
+    </div>
+    <div class="stat-card">
+        <h3>Pending</h3>
+        <h2 id="pendingCount">0</h2>
+    </div>
+    <div class="stat-card">
+        <h3>Resolved</h3>
+        <h2 id="resolvedCount">0</h2>
+    </div>
+</div>
+
+<section class="card">
+    <h2>All Student Complaints</h2>
+    <input type="text" id="searchComplaint"
+           placeholder="Search by complaint ID or student name">
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Priority</th>
+                    <th>Assign Staff</th>
+                    <th>Status</th>
+                    <th>Resolution</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="facultyComplaints">
+                <tr><td colspan="9">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="facultyHistory" class="history"></div>
+</section>
+{% endblock %}
